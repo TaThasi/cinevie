@@ -7,8 +7,8 @@ export default function NewsPage() {
     return (
         <main>
             <section className=" bg-black">
-                <div className="relative flex justify-start items-start" style={{height: 'calc(100vh - 80px)'}}>
-                    <div className=" w-full h-full absolute px-20 mt-10 gap-y-8 flex flex-col rounded-xl" style={{height: 'calc(100vh - 80px)'}}>
+                <div className="relative flex justify-start items-start">
+                    <div className=" w-full h-full px-8 sm:px-20 pb-12 mt-10 gap-y-8 flex flex-col rounded-xl">
                         <h1 className=" font-bold text-3xl">Today news</h1>
                         <Bento />
                     </div>
@@ -26,7 +26,7 @@ export default function NewsPage() {
                         {news.slice(0,3).map((item, index) => (
                             <div className=" w-full h-full" key={index}>
                                 <div className=" w-full lg:h-[256px] flex flex-col md:flex-row justify-between gap-8">
-                                    <div className="w-full md:w-[428px] h-full rounded-2xl" style={{ aspectRatio: 2 }}>
+                                    <div className="w-full md:w-[428px] h-full rounded-2xl overflow-hidden" style={{ aspectRatio: 2 }}>
                                         <NewsCardBento image_url={item.urlToImage}/>
                                     </div>
                                         <div className=" h-full w-full md:w-[65%] flex flex-col justify-start gap-y-4 ">
